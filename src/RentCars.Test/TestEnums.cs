@@ -15,14 +15,15 @@ public class TestEnums
     enumValue.ToString().Should().Be(expected);
   }
 
-  //   [Theory]
-  //   [InlineData(0, "FrontWheelDrive")]
-  //   [InlineData(1, "RearWheelDrive")]
-  //   [InlineData(2, "AllWheelDrive")]
-  //   public void TractionTypeShouldHaveCorrectValues(int valueEntry, string expected)
-  //   {
-  //     throw new NotImplementedException();
-  //   }
+  [Theory]
+  [InlineData(0, "FrontWheelDrive")]
+  [InlineData(1, "RearWheelDrive")]
+  [InlineData(2, "AllWheelDrive")]
+  public void TractionTypeShouldHaveCorrectValues(int valueEntry, string expected)
+  {
+    var enumValue = (TractionType)valueEntry;
+    enumValue.ToString().Should().Be(expected);
+  }
 
   //   [Theory]
   //   [InlineData(10, "Alcohol")]
