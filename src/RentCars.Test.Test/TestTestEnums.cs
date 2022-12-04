@@ -108,38 +108,38 @@ public class TestTestEnums3
     act.Should().NotThrow<NotImplementedException>();
   }
 }
-// public class TestTestEnums4
+public class TestTestEnums4
 {
-    [Trait("Category", "5 - Criar enum `RentStatus` no namespace RentCars.Types")]
-[Theory(DisplayName = "RentStatus deve ter as constantes e valores corretos")]
-[InlineData(0, "Confirmed", true)]
-[InlineData(1, "Finished", true)]
+  [Trait("Category", "5 - Criar enum `RentStatus` no namespace RentCars.Types")]
+  [Theory(DisplayName = "RentStatus deve ter as constantes e valores corretos")]
+  [InlineData(0, "Confirmed", true)]
+  [InlineData(1, "Finished", true)]
 
-[InlineData(1, "Confirmed", false)]
-[InlineData(0, "Finished", false)]
+  [InlineData(1, "Confirmed", false)]
+  [InlineData(0, "Finished", false)]
 
-[InlineData(2, "Confirmed", false)]
-[InlineData(2, "Finished", false)]
+  [InlineData(2, "Confirmed", false)]
+  [InlineData(2, "Finished", false)]
 
-[InlineData(0, "Test", false)]
-[InlineData(1, "Test", false)]
-public void TestRentStatusShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
-{
-  TestEnums instance = new();
-  Action act = () => instance.RentStatusShouldHaveCorrectValues(valueEntry, expected);
-  if (isCorrect)
+  [InlineData(0, "Test", false)]
+  [InlineData(1, "Test", false)]
+  public void TestRentStatusShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
   {
-    act.Should().NotThrow<Xunit.Sdk.XunitException>();
-  }
-  else
-  {
-    act.Should().Throw<Xunit.Sdk.XunitException>();
-  }
+    TestEnums instance = new();
+    Action act = () => instance.RentStatusShouldHaveCorrectValues(valueEntry, expected);
+    if (isCorrect)
+    {
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
+    }
 
-  act.Should().NotThrow<NotImplementedException>();
+    act.Should().NotThrow<NotImplementedException>();
 
-  Action actSameValues = () => instance.RentStatusFinishedShouldBeTheSameValueAsCancelled();
-  actSameValues.Should().NotThrow<Xunit.Sdk.XunitException>();
-  actSameValues.Should().NotThrow<NotImplementedException>();
-}
+    Action actSameValues = () => instance.RentStatusFinishedShouldBeTheSameValueAsCancelled();
+    actSameValues.Should().NotThrow<Xunit.Sdk.XunitException>();
+    actSameValues.Should().NotThrow<NotImplementedException>();
+  }
 }
