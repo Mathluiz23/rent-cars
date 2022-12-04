@@ -38,17 +38,20 @@ public class TestEnums
     enumValue.ToString().Should().Be(expected);
   }
 
-  //   [Theory]
-  //   [InlineData(0, "Confirmed")]
-  //   [InlineData(1, "Finished")]
-  //   public void RentStatusShouldHaveCorrectValues(int valueEntry, string expected)
-  //   {
-  //     throw new NotImplementedException();
-  //   }
+  [Theory]
+  [InlineData(0, "Confirmed")]
+  [InlineData(1, "Finished")]
+  public void RentStatusShouldHaveCorrectValues(int valueEntry, string expected)
+  {
+    var enumValue = (RentStatus)valueEntry;
+    enumValue.ToString().Should().Be(expected);
+  }
 
-  //   [Fact]
-  //   public void RentStatusFinishedShouldBeTheSameValueAsCancelled()
-  //   {
-  //     throw new NotImplementedException();
-  //   }
+  [Fact]
+  public void RentStatusFinishedShouldBeTheSameValueAsCancelled()
+  {
+    var finished = (int)RentStatus.Finished;
+    var cancelled = (int)RentStatus.Cancelled;
+    finished.Should().Be(cancelled);
+  }
 }
