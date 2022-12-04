@@ -25,17 +25,18 @@ public class TestEnums
     enumValue.ToString().Should().Be(expected);
   }
 
-  //   [Theory]
-  //   [InlineData(10, "Alcohol")]
-  //   [InlineData(20, "Gasoline")]
-  //   [InlineData(30, "Flex")]
-  //   [InlineData(40, "Diesel")]
-  //   [InlineData(50, "Electric")]
-  //   [InlineData(60, "Hybrid")]
-  //   public void FuelTypeShouldHaveCorrectValues(int valueEntry, string expected)
-  //   {
-  //     throw new NotImplementedException();
-  //   }
+  [Theory]
+  [InlineData(10, "Alcohol")]
+  [InlineData(20, "Gasoline")]
+  [InlineData(30, "Flex")]
+  [InlineData(40, "Diesel")]
+  [InlineData(50, "Electric")]
+  [InlineData(60, "Hybrid")]
+  public void FuelTypeShouldHaveCorrectValues(int valueEntry, string expected)
+  {
+    var enumValue = (FuelType)valueEntry;
+    enumValue.ToString().Should().Be(expected);
+  }
 
   //   [Theory]
   //   [InlineData(0, "Confirmed")]
