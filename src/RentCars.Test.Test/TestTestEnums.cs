@@ -29,38 +29,38 @@ public class TestTestEnums
     act.Should().NotThrow<NotImplementedException>();
   }
 }
-// public class TestTestEnums2
-// {
-//     [Trait("Category", "3 - Criar enum `TractionType` no namespace RentCars.Types")]
-//     [Theory(DisplayName = "TractionType deve ter as constantes e valores corretos")]
-//     [InlineData(0, "FrontWheelDrive", true)]
-//     [InlineData(1, "RearWheelDrive", true)]
-//     [InlineData(2, "AllWheelDrive", true)]
-//     [InlineData(1, "FrontWheelDrive", false)]
-//     [InlineData(0, "RearWheelDrive", false)]
-//     [InlineData(0, "AllWheelDrive", false)]
-//     [InlineData(0, "Test", false)]
-//     [InlineData(1, "Test", false)]
-//     [InlineData(2, "Test", false)]
-//     [InlineData(3, "FrontWheelDrive", false)]
-//     [InlineData(3, "RearWheelDrive", false)]
-//     [InlineData(3, "AllWheelDrive", false)]
-//     public void TestTractionTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
-//     {
-//         TestEnums instance = new();
-//         Action act = () => instance.TractionTypeShouldHaveCorrectValues(valueEntry, expected);
-//         if (isCorrect)
-//         {
-//             act.Should().NotThrow<Xunit.Sdk.XunitException>();
-//         }
-//         else
-//         {
-//             act.Should().Throw<Xunit.Sdk.XunitException>();
-//         }
-        
-//         act.Should().NotThrow<NotImplementedException>();
-//     }
-// }
+public class TestTestEnums2
+{
+  [Trait("Category", "3 - Criar enum `TractionType` no namespace RentCars.Types")]
+  [Theory(DisplayName = "TractionType deve ter as constantes e valores corretos")]
+  [InlineData(0, "FrontWheelDrive", true)]
+  [InlineData(1, "RearWheelDrive", true)]
+  [InlineData(2, "AllWheelDrive", true)]
+  [InlineData(1, "FrontWheelDrive", false)]
+  [InlineData(0, "RearWheelDrive", false)]
+  [InlineData(0, "AllWheelDrive", false)]
+  [InlineData(0, "Test", false)]
+  [InlineData(1, "Test", false)]
+  [InlineData(2, "Test", false)]
+  [InlineData(3, "FrontWheelDrive", false)]
+  [InlineData(3, "RearWheelDrive", false)]
+  [InlineData(3, "AllWheelDrive", false)]
+  public void TestTractionTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
+  {
+    TestEnums instance = new();
+    Action act = () => instance.TractionTypeShouldHaveCorrectValues(valueEntry, expected);
+    if (isCorrect)
+    {
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
+    }
+
+    act.Should().NotThrow<NotImplementedException>();
+  }
+}
 // public class TestTestEnums3
 // {
 //     [Trait("Category", "4 - Criar enum `FuelType` no namespace RentCars.Types")]
