@@ -5,26 +5,26 @@ namespace RentCars.Test.Test;
 
 public class TestTestStruct
 {
-    [Trait("Category", "1 - Criar uma `Struct` para as **Cores** no namespace RentCars.Types")]
-    [Theory(DisplayName = "Color deve ter a propriedade Nome do tipo String")]
-    [MemberData(nameof(ColorShouldHaveNameAttributeData))]
-    public void TestColorShouldHaveNameAttribute(Color colorEntry, string expected, bool isCorrect)
+  [Trait("Category", "1 - Criar uma `Struct` para as **Cores** no namespace RentCars.Types")]
+  [Theory(DisplayName = "Color deve ter a propriedade Nome do tipo String")]
+  [MemberData(nameof(ColorShouldHaveNameAttributeData))]
+  public void TestColorShouldHaveNameAttribute(Color colorEntry, string expected, bool isCorrect)
+  {
+    TestStruct instance = new();
+    Action act = () => instance.ColorShouldHaveNameAttribute(colorEntry, expected);
+    if (isCorrect)
     {
-        TestStruct instance = new();
-        Action act = () => instance.ColorShouldHaveNameAttribute(colorEntry, expected);
-        if (isCorrect)
-        {
-            act.Should().NotThrow<Xunit.Sdk.XunitException>();
-        }
-        else
-        {
-            act.Should().Throw<Xunit.Sdk.XunitException>();
-        }
-        
-        act.Should().NotThrow<NotImplementedException>();
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
     }
 
-    public static TheoryData<Color, string, bool> ColorShouldHaveNameAttributeData = new()
+    act.Should().NotThrow<NotImplementedException>();
+  }
+
+  public static TheoryData<Color, string, bool> ColorShouldHaveNameAttributeData = new()
     {
         { new Color() { Name = "SomeName" }, "SomeName", true },
         { new Color() { Name = "SomeName2" }, "SomeName2", true },
@@ -33,26 +33,26 @@ public class TestTestStruct
         { new Color() { Name = "SomeName3" }, "SomeName2", false },
     };
 
-    [Trait("Category", "1 - Criar uma `Struct` para as **Cores** no namespace RentCars.Types")]
-    [Theory(DisplayName = "Color deve ter a propriedade Hex do tipo String")]
-    [MemberData(nameof(ColorShouldHaveHexAttributeData))]
-    public void TestColorShouldHaveHexAttribute(Color colorEntry, string expected, bool isCorrect)
+  [Trait("Category", "1 - Criar uma `Struct` para as **Cores** no namespace RentCars.Types")]
+  [Theory(DisplayName = "Color deve ter a propriedade Hex do tipo String")]
+  [MemberData(nameof(ColorShouldHaveHexAttributeData))]
+  public void TestColorShouldHaveHexAttribute(Color colorEntry, string expected, bool isCorrect)
+  {
+    TestStruct instance = new();
+    Action act = () => instance.ColorShouldHaveHexAttribute(colorEntry, expected);
+    if (isCorrect)
     {
-        TestStruct instance = new();
-        Action act = () => instance.ColorShouldHaveHexAttribute(colorEntry, expected);
-        if (isCorrect)
-        {
-            act.Should().NotThrow<Xunit.Sdk.XunitException>();
-        }
-        else
-        {
-            act.Should().Throw<Xunit.Sdk.XunitException>();
-        }
-        
-        act.Should().NotThrow<NotImplementedException>();
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
     }
 
-    public static TheoryData<Color, string, bool> ColorShouldHaveHexAttributeData = new()
+    act.Should().NotThrow<NotImplementedException>();
+  }
+
+  public static TheoryData<Color, string, bool> ColorShouldHaveHexAttributeData = new()
     {
         { new Color() { Hex = "SomeName" }, "SomeName", true },
         { new Color() { Hex = "SomeName2" }, "SomeName2", true },
