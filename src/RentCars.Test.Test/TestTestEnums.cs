@@ -61,53 +61,53 @@ public class TestTestEnums2
     act.Should().NotThrow<NotImplementedException>();
   }
 }
-// public class TestTestEnums3
-// {
-//     [Trait("Category", "4 - Criar enum `FuelType` no namespace RentCars.Types")]
-//     [Theory(DisplayName = "FuelType deve ter as constantes e valores corretos")]
-//     [InlineData(10, "Alcohol", true)]
-//     [InlineData(20, "Gasoline", true)]
-//     [InlineData(30, "Flex", true)]
-//     [InlineData(40, "Diesel", true)]
-//     [InlineData(50, "Electric", true)]
-//     [InlineData(60, "Hybrid", true)]
+public class TestTestEnums3
+{
+  [Trait("Category", "4 - Criar enum `FuelType` no namespace RentCars.Types")]
+  [Theory(DisplayName = "FuelType deve ter as constantes e valores corretos")]
+  [InlineData(10, "Alcohol", true)]
+  [InlineData(20, "Gasoline", true)]
+  [InlineData(30, "Flex", true)]
+  [InlineData(40, "Diesel", true)]
+  [InlineData(50, "Electric", true)]
+  [InlineData(60, "Hybrid", true)]
 
-//     [InlineData(0, "Alcohol", false)]
-//     [InlineData(0, "Gasoline", false)]
-//     [InlineData(0, "Flex", false)]
-//     [InlineData(0, "Diesel", false)]
-//     [InlineData(0, "Electric", false)]
-//     [InlineData(0, "Hybrid", false)]
+  [InlineData(0, "Alcohol", false)]
+  [InlineData(0, "Gasoline", false)]
+  [InlineData(0, "Flex", false)]
+  [InlineData(0, "Diesel", false)]
+  [InlineData(0, "Electric", false)]
+  [InlineData(0, "Hybrid", false)]
 
-//     [InlineData(1, "Alcohol", false)]
-//     [InlineData(1, "Gasoline", false)]
-//     [InlineData(1, "Flex", false)]
-//     [InlineData(1, "Diesel", false)]
-//     [InlineData(1, "Electric", false)]
-//     [InlineData(1, "Hybrid", false)]
+  [InlineData(1, "Alcohol", false)]
+  [InlineData(1, "Gasoline", false)]
+  [InlineData(1, "Flex", false)]
+  [InlineData(1, "Diesel", false)]
+  [InlineData(1, "Electric", false)]
+  [InlineData(1, "Hybrid", false)]
 
-//     [InlineData(2, "Alcohol", false)]
-//     [InlineData(2, "Gasoline", false)]
-//     [InlineData(2, "Flex", false)]
-//     [InlineData(2, "Diesel", false)]
-//     [InlineData(2, "Electric", false)]
-//     [InlineData(2, "Hybrid", false)]
-//     public void TestFuelTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
-//     {
-//         TestEnums instance = new();
-//         Action act = () => instance.FuelTypeShouldHaveCorrectValues(valueEntry, expected);
-//         if (isCorrect)
-//         {
-//             act.Should().NotThrow<Xunit.Sdk.XunitException>();
-//         }
-//         else
-//         {
-//             act.Should().Throw<Xunit.Sdk.XunitException>();
-//         }
-        
-//         act.Should().NotThrow<NotImplementedException>();
-//     }
-// }
+  [InlineData(2, "Alcohol", false)]
+  [InlineData(2, "Gasoline", false)]
+  [InlineData(2, "Flex", false)]
+  [InlineData(2, "Diesel", false)]
+  [InlineData(2, "Electric", false)]
+  [InlineData(2, "Hybrid", false)]
+  public void TestFuelTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
+  {
+    TestEnums instance = new();
+    Action act = () => instance.FuelTypeShouldHaveCorrectValues(valueEntry, expected);
+    if (isCorrect)
+    {
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
+    }
+
+    act.Should().NotThrow<NotImplementedException>();
+  }
+}
 // public class TestTestEnums4
 {
     [Trait("Category", "5 - Criar enum `RentStatus` no namespace RentCars.Types")]
