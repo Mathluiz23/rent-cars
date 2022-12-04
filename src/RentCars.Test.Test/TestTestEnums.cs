@@ -1,34 +1,34 @@
-// using RentCars.Test;
+using RentCars.Test;
 
-// namespace RentCars.Test.Test;
+namespace RentCars.Test.Test;
 
-// public class TestTestEnums
-// {
-//     [Trait("Category", "2 - Criar enum `BreakeType` no namespace RentCars.Types")]
-//     [Theory(DisplayName = "BreakeType deve ter as constantes e valores corretos")]
-//     [InlineData(1, "Chamber", true)]
-//     [InlineData(2, "Disc", true)]
-//     [InlineData(3, "Drum", true)]
-//     [InlineData(5, "Drum", false)]
-//     [InlineData(0, "Chamber", false)]
-//     [InlineData(0, "Disc", false)]
-//     [InlineData(0, "Drum", false)]
-//     public void TestBreakeTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
-//     {
-//         TestEnums instance = new();
-//         Action act = () => instance.BreakeTypeShouldHaveCorrectValues(valueEntry, expected);
-//         if (isCorrect)
-//         {
-//             act.Should().NotThrow<Xunit.Sdk.XunitException>();
-//         }
-//         else
-//         {
-//             act.Should().Throw<Xunit.Sdk.XunitException>();
-//         }
+public class TestTestEnums
+{
+  [Trait("Category", "2 - Criar enum `BreakeType` no namespace RentCars.Types")]
+  [Theory(DisplayName = "BreakeType deve ter as constantes e valores corretos")]
+  [InlineData(1, "Chamber", true)]
+  [InlineData(2, "Disc", true)]
+  [InlineData(3, "Drum", true)]
+  [InlineData(5, "Drum", false)]
+  [InlineData(0, "Chamber", false)]
+  [InlineData(0, "Disc", false)]
+  [InlineData(0, "Drum", false)]
+  public void TestBreakeTypeShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
+  {
+    TestEnums instance = new();
+    Action act = () => instance.BreakeTypeShouldHaveCorrectValues(valueEntry, expected);
+    if (isCorrect)
+    {
+      act.Should().NotThrow<Xunit.Sdk.XunitException>();
+    }
+    else
+    {
+      act.Should().Throw<Xunit.Sdk.XunitException>();
+    }
 
-//         act.Should().NotThrow<NotImplementedException>();
-//     }
-// }
+    act.Should().NotThrow<NotImplementedException>();
+  }
+}
 // public class TestTestEnums2
 // {
 //     [Trait("Category", "3 - Criar enum `TractionType` no namespace RentCars.Types")]
@@ -57,7 +57,7 @@
 //         {
 //             act.Should().Throw<Xunit.Sdk.XunitException>();
 //         }
-
+        
 //         act.Should().NotThrow<NotImplementedException>();
 //     }
 // }
@@ -104,42 +104,42 @@
 //         {
 //             act.Should().Throw<Xunit.Sdk.XunitException>();
 //         }
-
+        
 //         act.Should().NotThrow<NotImplementedException>();
 //     }
 // }
 // public class TestTestEnums4
-// {
-//     [Trait("Category", "5 - Criar enum `RentStatus` no namespace RentCars.Types")]
-//     [Theory(DisplayName = "RentStatus deve ter as constantes e valores corretos")]
-//     [InlineData(0, "Confirmed", true)]
-//     [InlineData(1, "Finished", true)]
+{
+    [Trait("Category", "5 - Criar enum `RentStatus` no namespace RentCars.Types")]
+[Theory(DisplayName = "RentStatus deve ter as constantes e valores corretos")]
+[InlineData(0, "Confirmed", true)]
+[InlineData(1, "Finished", true)]
 
-//     [InlineData(1, "Confirmed", false)]
-//     [InlineData(0, "Finished", false)]
+[InlineData(1, "Confirmed", false)]
+[InlineData(0, "Finished", false)]
 
-//     [InlineData(2, "Confirmed", false)]
-//     [InlineData(2, "Finished", false)]
+[InlineData(2, "Confirmed", false)]
+[InlineData(2, "Finished", false)]
 
-//     [InlineData(0, "Test", false)]
-//     [InlineData(1, "Test", false)]
-//     public void TestRentStatusShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
-//     {
-//         TestEnums instance = new();
-//         Action act = () => instance.RentStatusShouldHaveCorrectValues(valueEntry, expected);
-//         if (isCorrect)
-//         {
-//             act.Should().NotThrow<Xunit.Sdk.XunitException>();
-//         }
-//         else
-//         {
-//             act.Should().Throw<Xunit.Sdk.XunitException>();
-//         }
+[InlineData(0, "Test", false)]
+[InlineData(1, "Test", false)]
+public void TestRentStatusShouldHaveCorrectValues(int valueEntry, string expected, bool isCorrect)
+{
+  TestEnums instance = new();
+  Action act = () => instance.RentStatusShouldHaveCorrectValues(valueEntry, expected);
+  if (isCorrect)
+  {
+    act.Should().NotThrow<Xunit.Sdk.XunitException>();
+  }
+  else
+  {
+    act.Should().Throw<Xunit.Sdk.XunitException>();
+  }
 
-//         act.Should().NotThrow<NotImplementedException>();
+  act.Should().NotThrow<NotImplementedException>();
 
-//         Action actSameValues = () => instance.RentStatusFinishedShouldBeTheSameValueAsCancelled();
-//         actSameValues.Should().NotThrow<Xunit.Sdk.XunitException>();
-//         actSameValues.Should().NotThrow<NotImplementedException>();
-//     }
-// }
+  Action actSameValues = () => instance.RentStatusFinishedShouldBeTheSameValueAsCancelled();
+  actSameValues.Should().NotThrow<Xunit.Sdk.XunitException>();
+  actSameValues.Should().NotThrow<NotImplementedException>();
+}
+}
