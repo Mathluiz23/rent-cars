@@ -4,5 +4,6 @@ public enum RentStatus
 {
   Confirmed = 0,
   Finished = 1,
-  Cancelled = Finished
+  Cancelled = Finished,
+  Canceled = 2
 }
