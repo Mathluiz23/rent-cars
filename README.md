@@ -33,7 +33,12 @@ dotnet test
 
 # Projeto
 
-O projeto Rent Cars consiste em um sistema de aluguéis de veículos
+O projeto Rent Cars consiste em um sistema de aluguéis de veículos. Onde é possível selecionar:
+- O tipo de veículo que deseja alugar.
+- A quantidade de dias que o veículo será locado.
+- O tipo do locatário, se é um CPF OU CNPJ.
+- O preço do aluguel, que será calculado automaticamente de acordo com o veículo, dias e o tipo de locatário.
+
 
 O projeto está dividido em partes organizadas. Em `Model` foram realizadas as classes seguindo a seguinte hierarquia:
 
@@ -51,11 +56,7 @@ O projeto está dividido em partes organizadas. Em `Model` foram realizadas as c
 - `Rent.cs` descreve a classe para um aluguel entre uma **pessoa** e um **veículo**.
 
 ## `Struct` para as **Cores**
-
-<details>
   Atributo público, criado com os campos Name e Hex do tipo string
-</details>
-
 <details>
   <summary>Testes</summary><br />
   Implementado Testes para verificar se a struct Color tem o atributo `Name` e `Hex` do tipo `string`.
