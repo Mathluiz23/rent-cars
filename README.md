@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do projeto Rent Cars
+# Boas-vindas ao repositório do projeto Rent Cars 🚗🏍️
 
 # Orientações
 
